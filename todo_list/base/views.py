@@ -18,7 +18,7 @@ class CustomLoginView(LoginView):
 
     template_name="base/login.html"    
     fields = '__all__'
-    redirect_authenticated_user= False
+    redirect_authenticated_user = False
     
     def get_success_url(self):
         return reverse_lazy('tasks')
@@ -67,6 +67,7 @@ class TaskDetail(LoginRequiredMixin, DetailView):
     context_object_name = 'task'
     template_name = 'base/task.html'
 
+
 class TaskCreate(LoginRequiredMixin, CreateView):
 
     model = Task
@@ -76,7 +77,6 @@ class TaskCreate(LoginRequiredMixin, CreateView):
     def form_valid(self,form):
         form.instance.user = self.request.user
         return super(TaskCreate, self).form_valid(form)
-
 
     
 class TaskUpdate(LoginRequiredMixin, UpdateView):
