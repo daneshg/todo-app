@@ -19,4 +19,4 @@ Jenkinsfile is configured do run following steps
 * Run tests
 * Generate code coverage report.
 
-[jenkins-build-snapshot](media/jenkins-build-snapshot.png)
+![jenkins-build-snapshot](media/jenkins-pipeline.png)
